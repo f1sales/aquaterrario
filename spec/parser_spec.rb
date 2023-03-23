@@ -36,5 +36,9 @@ RSpec.describe F1SalesCustom::Email::Parser do
     it 'contains message' do
       expect(parsed_email[:message]).to eq('Mensagem de Teste')
     end
+
+    it 'contains product name' do
+      expect(parsed_email[:product][:name]).to eq('')
+    end
   end
 end
