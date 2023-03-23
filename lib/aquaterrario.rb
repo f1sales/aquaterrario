@@ -55,7 +55,7 @@ module Aquaterrario
     end
 
     def customer_phone
-      parsed_email['telefone'] || parsed_email['celular']
+      parsed_email['celular']
     end
 
     def customer_email
