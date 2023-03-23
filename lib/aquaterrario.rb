@@ -24,6 +24,7 @@ module Aquaterrario
       {
         source: source,
         customer: customer,
+        product: product,
         message: lead_message
       }
     end
@@ -64,6 +65,12 @@ module Aquaterrario
 
     def lead_message
       parsed_email['mensagem']
+    end
+
+    def product
+      {
+        name: ''
+      }
     end
   end
 end
