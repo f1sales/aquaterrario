@@ -30,7 +30,7 @@ module Aquaterrario
     end
 
     def parsed_email
-      @email.body.colons_to_hash(/(#{regular_expression}).*?\n/, false)
+      @email.body.colons_to_hash(/(#{regular_expression}).*?\ /, false)
     end
 
     def regular_expression
@@ -60,7 +60,7 @@ module Aquaterrario
     end
 
     def customer_email
-      parsed_email['email']
+      parsed_email['email']&.split&.first
     end
 
     def lead_message
